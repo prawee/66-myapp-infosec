@@ -15,11 +15,11 @@ module.exports = {
         // using .map for loop data
 
         // method 1
-        // await event.result.map(item => {
-        //     console.log('item ', item)
-        //     item.mobile = atob(item.mobile)
-        //     return item
-        // })
+        await event.result.map(item => {
+            console.log('item ', item)
+            item.mobile = atob(item.mobile)
+            return item
+        })
 
         // method 2
         // await event.result.forEach(item => {
@@ -29,10 +29,10 @@ module.exports = {
         // })
 
         // method 3
-        let i;
-        for(i = 0; i < event.result.length; i++) {
-            event.result[i].mobile = atob(event.result[i].mobile)
-        }
+        // let i;
+        // for(i = 0; i < event.result.length; i++) {
+        //     event.result[i].mobile = atob(event.result[i].mobile)
+        // }
     
     }
 }
